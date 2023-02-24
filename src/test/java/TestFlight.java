@@ -63,4 +63,21 @@ public class TestFlight {
     public void canGetPassenger1(){
         assertEquals("Jenyth", flight.getPassengers().get(1).getName());
     }
+
+    @Test
+    public void canGetDepartureAirport(){
+        assertEquals("edinburgh", flight.getFlightInfo().get("departure airport"));
+    }
+    @Test
+    public void canGetFlightNumber(){
+        assertEquals("bd1234", flight.getFlightInfo().get("flight number"));
+    }
+    @Test
+    public void canGetDepartTime(){
+        assertEquals("1200", flight.getFlightInfo().get("departure time"));
+    }
+    @Test
+    public void canGetArriveTime(){
+        assertEquals("1500", flight.getFlightInfo().get("arrive time"));
+    }
 }

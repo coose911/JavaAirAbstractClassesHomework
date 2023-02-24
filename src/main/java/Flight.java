@@ -46,5 +46,9 @@ public class Flight {
         return this.passengers;
     }
 
+    public HashMap<String, String> getFlightInfo(){
+        return this.flightInfo;
+    }
+
 
 }
