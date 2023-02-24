@@ -16,7 +16,7 @@ public class Flight {
         this.crewMembers = crewMembers;
         this.passengers = passengers;
         this.flightInfo = flightInfo;
-        this.seats = 6;
+        this.seats = 4;
     }
 
     public ArrayList<Pilot> getPilots(){
@@ -35,6 +35,10 @@ public class Flight {
         return this.flightInfo;
     }
 
+    public void addPassenger(Passenger passenger){
+        this.passengers.add(passenger);
+    }
+
     public int getAvailableSeats(){
         for (int i = 0; i < this.passengers.size(); i++){
             this.seats -= 1;
@@ -42,5 +46,14 @@ public class Flight {
         return this.seats;
     }
 
+    public String bookFlight(){
+        int numPassengers = this.passengers.size();
+        int capacity = this.seats;
+        if (numPassengers > capacity){
+            return "flight fully booked";
+        } else{
+            return "flight booked";
+        }
+    }
 
 }

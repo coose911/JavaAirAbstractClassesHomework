@@ -13,6 +13,9 @@ public class TestFlight {
     CabinCrewMember crewMember2;
     Passenger passenger1;
     Passenger passenger2;
+    Passenger passenger3;
+    Passenger passenger4;
+    Passenger passenger5;
 
 
     @Before
@@ -80,6 +83,22 @@ public class TestFlight {
 
     @Test
     public void getSeatsLeft(){
-        assertEquals(4, flight.getAvailableSeats());
+        assertEquals(2, flight.getAvailableSeats());
     }
+
+    @Test
+    public void canBookFlight(){
+        assertEquals("flight booked", flight.bookFlight());
+    }
+    @Test
+    public void cantBookFlight(){
+        passenger3 = new Passenger("mick", 1);
+        passenger4 = new Passenger("Marina", 1);
+        passenger5 = new Passenger("Louis", 2);
+        flight.addPassenger(passenger3);
+        flight.addPassenger(passenger4);
+        flight.addPassenger(passenger5);
+        assertEquals("flight fully booked", flight.bookFlight());
+    }
+
 }

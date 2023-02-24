@@ -15,7 +15,4 @@ public abstract class CrewMember {
     public ListOfCrewMembers getRole(){
         return this.role;
     }
-
-
-
 }

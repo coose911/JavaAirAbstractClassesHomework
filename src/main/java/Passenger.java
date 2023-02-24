@@ -7,7 +7,6 @@ public class Passenger {
     public Passenger(String name, int numberOfBags){
         this.name = name;
         this.numberOfBags = numberOfBags;
-
     }
 
     public String getName(){
