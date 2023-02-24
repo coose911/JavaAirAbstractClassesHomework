@@ -35,13 +35,6 @@ public class Flight {
         return this.flightInfo;
     }
 
-    public int getAvailableSeats(){
-        for (int i = 0; i < this.passengers.size(); i++){
-            this.seats -= 1;
-        }
-        return this.seats;
-    }
-
     public String bookFlight(){
         int numPassengers = this.passengers.size();
         int capacity = this.seats;
@@ -50,6 +43,13 @@ public class Flight {
         } else{
             return "flight booked";
         }
+    }
+
+    public int getAvailableSeats(){
+        for (int i = 0; i < this.passengers.size(); i++){
+            this.seats -= 1;
+        }
+        return this.seats;
     }
 
     public void addPassenger(Passenger passenger){
