@@ -4,11 +4,11 @@ import java.util.Map;
 
 public class Flight {
 
-
     private ArrayList<Pilot>pilots;
     private ArrayList<CabinCrewMember>crewMembers;
     private ArrayList<Passenger>passengers;
     private HashMap<String, String> flightInfo;
+    private int seats;
 
 
     public Flight(ArrayList<Pilot>pilots, ArrayList<CabinCrewMember>crewMembers, ArrayList<Passenger>passengers, HashMap<String, String>flightInfo){
@@ -16,27 +16,12 @@ public class Flight {
         this.crewMembers = crewMembers;
         this.passengers = passengers;
         this.flightInfo = flightInfo;
+        this.seats = 6;
     }
-
-//    public void addPilot(Pilot pilot){
-//        this.pilots.add(pilot);
-//    }
-//
-//    public void addCrewMember(CabinCrewMember crewMember){
-//        this.crewMembers.add(crewMember);
-//    }
-//
-//    public void addPassenger(Passenger passenger){
-//        this.passengers.add(passenger);
-//    }
 
     public ArrayList<Pilot> getPilots(){
         return this.pilots;
     }
-
-//    public ArrayList<Pilot> getPilotsName(){
-//        return this.pilots.getName();
-//    }
 
     public ArrayList<CabinCrewMember> getCrewMembers(){
         return this.crewMembers;
@@ -48,6 +33,13 @@ public class Flight {
 
     public HashMap<String, String> getFlightInfo(){
         return this.flightInfo;
+    }
+
+    public int getAvailableSeats(){
+        for (int i = 0; i < this.passengers.size(); i++){
+            this.seats -= 1;
+        }
+        return this.seats;
     }
 
 

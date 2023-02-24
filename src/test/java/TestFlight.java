@@ -77,4 +77,9 @@ public class TestFlight {
     public void canGetArriveTime(){
         assertEquals("1500", flight.getFlightInfo().get("arrive time"));
     }
+
+    @Test
+    public void getSeatsLeft(){
+        assertEquals(4, flight.getAvailableSeats());
+    }
 }
