@@ -17,6 +17,7 @@ public class Flight {
         this.passengers = passengers;
         this.flightInfo = flightInfo;
         this.seats = 4;
+
     }
 
     public ArrayList<Pilot> getPilots(){

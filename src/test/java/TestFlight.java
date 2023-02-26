@@ -41,6 +41,7 @@ public class TestFlight {
         flightinfo.put("departure airport", "edinburgh");
         flightinfo.put("departure time", "1200");
         flightinfo.put("arrive time", "1500");
+        flightinfo.put("baggage allowance", "20");
         flight = new Flight(pilots, crewMembers, passengers, flightinfo);
     }
 
