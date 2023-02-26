@@ -53,4 +53,7 @@ public class TestFlightManager {
     public void testBaggageWeight(){
         assertEquals(40, flightManager.totalBaggageWeight());
     }
+
+    // look into setting up a function to get passenger bags on the flight so you dont access passenger directly
+    // but the bags booked onto the flight as its a flight manager.
 }
