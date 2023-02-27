@@ -32,6 +32,8 @@ public class Flight {
         return this.passengers;
     }
 
+    // baggage function accessing person here
+
     public HashMap<String, String> getFlightInfo(){
         return this.flightInfo;
     }

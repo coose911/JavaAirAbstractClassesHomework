@@ -7,10 +7,6 @@ public class FlightManager {
     Flight flight;
     Passenger passenger;
 
-    // for testing i need to create a new instance of the flight class
-    // look into making a new instance of the passenger class for the functions underlined red
-
-
     public FlightManager(Flight flight, Passenger passenger){
         this.flight = flight;
         this.passenger = passenger;
